@@ -47,12 +47,13 @@ def preprocess_data(file_path):
     df['Cleaned_Review'] = df['Cleaned_Review'].apply(lemmatize_text)
 
     # Save cleaned data for training
-    df.to_csv('C:/Users/DELL/Desktop/sentiment-analysis-project/data/processed/cleaned_reviews.csv', index=False)
+    df.to_csv(r"C:\Users\DELL\Desktop\Sentiment-Analysis-System\data\processed\cleaned_reviews.csv", index=False)
     print("Preprocessed data saved to 'data/processed/cleaned_reviews.csv'")
 
     return df
 
 # Run this file directly to test preprocessing
 if __name__ == "__main__":
-    file_path = "C:/Users/DELL/Desktop/sentiment-analysis-project/data/raw/DataSet_PBL_Final_2024-25.xlsx"  # Adjust path as needed
+    file_path = r"C:\Users\DELL\Desktop\Sentiment-Analysis-System\data\raw\DataSet_PBL_Final_2024-25.xlsx"
+  # Adjust path as needed
     preprocess_data(file_path)
